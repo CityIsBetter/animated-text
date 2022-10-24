@@ -14,13 +14,16 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
+
 }
+
+
 .container span{
     text-transform: uppercase;
     display: block;
 }
 .text1{
-    color: white;
+    color: transparent;
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 8px;
@@ -28,11 +31,22 @@ body{
     background: black;
     position: relative;
     animation: text 3s 1;
+    -webkit-text-stroke: 1px white;
+    background: url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
 }
 .text2{
     font-size: 30px;
     color: red;
-    animation: textc 5s 1;
+    animation: textc 2s 1;
+    animation-delay: 3s;
 
 }
 @keyframes text{
@@ -57,6 +71,7 @@ body{
         color: yellow;
     }
 }
+
 .cursor{
     position: fixed;
     width: 20px;
